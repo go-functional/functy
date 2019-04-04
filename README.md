@@ -1,6 +1,6 @@
 # functy
 
-Often times, vecty code will have lots of nested function calls and the code gets hard to read and manage. This module has convenience functions for building up [vecty](https://github.com/gopherjs/vecty) elements in a functional pattern.
+Often times, [vecty](https://github.com/gopherjs/vecty) code will have lots of nested function calls and the code gets hard to read and manage. This module has convenience functions for building up vecty elements in a functional pattern.
 
 Below is an example adapted from the vecty example code for rendering Markdown:
 
@@ -36,4 +36,9 @@ func (p *PageView) Render() vecty.ComponentOrHTML {
 }
 ```
 
-Inspired by and [blaze-html] https://jaspervdj.be/blaze/tutorial.html and others.
+Inspired by:
+
+- [blaze-html](https://jaspervdj.be/blaze/tutorial.html)
+- [htmlgo](https://github.com/julvo/htmlgo)
+
+And built on the shoulders of [vecty](https://github.com/gopherjs/vecty), of course!
