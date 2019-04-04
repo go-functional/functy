@@ -27,6 +27,15 @@ func (w Wrapper) ChildFn(fn func(...vecty.MarkupOrChild) *vecty.HTML) Wrapper {
 	}
 }
 
+// Peer returns a new Wrapper with children as first-level children
+// of parent
+func Peer(parent Wrapper, children ...Wrapper) Wrapper {
+	for _, child := range children {
+		parent.markupOrChild = append(parent.markupOrChild, child)
+	}
+	return parent
+}
+
 // Apply converts the wrapper into a vecty.HTML so you can use it in your
 // "regularly scheduled" code
 func (w Wrapper) Apply() *vecty.HTML {
