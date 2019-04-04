@@ -16,8 +16,8 @@ func (w Wrapper) Markup(appliers ...vecty.Applyer) Wrapper {
 	return w
 }
 
-// Child adds a child to the element inside this wrapper
-func (w Wrapper) Child(fn func(...vecty.MarkupOrChild) *vecty.HTML) Wrapper {
+// ChildFn returns a copy of w with the child inside of it
+func (w Wrapper) ChildFn(fn func(...vecty.MarkupOrChild) *vecty.HTML) Wrapper {
 	parentFn := w.fn
 	childFn := fn
 	return Wrapper{
@@ -25,13 +25,6 @@ func (w Wrapper) Child(fn func(...vecty.MarkupOrChild) *vecty.HTML) Wrapper {
 			return parentFn(childFn(args...))
 		},
 	}
-}
-
-// PeerFn wraps fn into a puts w and the
-func (w Wrapper) PeerFn(
-	parent Wrapper,
-	fn func(...vecty.MarkupOrChild) *vecty.HTML) Wrapper {
-
 }
 
 // Apply converts the wrapper into a vecty.HTML so you can use it in your

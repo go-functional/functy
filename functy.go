@@ -4,8 +4,8 @@ import (
 	"github.com/gopherjs/vecty"
 )
 
-// Wrap some standard vecty HTML so that you can manipulate it in the
-// functional style. For example, here's how you'd build a <form>:
+// Wrap some standard vecty HTML so that you can manipulate it with functy
+// builders. For example, here's how you'd build a <form>:
 //
 //	form := Wrap(elem.Form). // don't _call_ elem.Form() here!
 //		Markup(vecty.Class("sample-form")). // add class="sample-form"
