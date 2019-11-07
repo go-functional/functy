@@ -1,3 +1,5 @@
+Hi Gophers! Unfortunately, I don't have the time to maintain this library right now, so I can't add any features. I'll gladly accept pull requests if you're interested. Also, if you'd like to maintaining the library longer term, I'm also happy to welcome you as a contributor. If you're interested in either submitting a PR or being a longer term maintainer, please let me know on the [Gophers Slack](https://invite.slack.golangbridge.org/). My username there is `arschles`.
+
 # functy
 
 Often times, [vecty](https://github.com/gopherjs/vecty) code will have lots of nested function calls and the code gets hard to read and manage. This module has convenience functions for building up vecty elements in a functional pattern.
